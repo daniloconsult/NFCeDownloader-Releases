@@ -1,57 +1,64 @@
-# NFCe Downloader - Downloads
+﻿# BuscaCupom - Sistema de Download de NFCe
 
-## 📥 Última Versão
+[![Versao](https://img.shields.io/badge/versao-1.0.1-blue.svg)](https://github.com/daniloconsult/NFCeDownloader-Releases/releases/latest)
+[![Plataforma](https://img.shields.io/badge/plataforma-Windows-lightgrey.svg)](https://github.com/daniloconsult/NFCeDownloader-Releases/releases)
+[![.NET](https://img.shields.io/badge/.NET-8.0-purple.svg)](https://dotnet.microsoft.com/)
 
-[**⬇️ Baixar Versão Mais Recente**](../../releases/latest)
+## Download da Ultima Versao
 
----
-
-## 🚀 O que é?
-
-Sistema profissional para download e gerenciamento de Notas Fiscais Eletrônicas (NFCe) com suporte multi-empresa.
-
-### ✨ Principais Recursos:
-- 🏢 **Multi-Tenant**: Gerenciamento de múltiplas empresas
-- 👥 **Controle de Usuários**: Sistema de permissões por empresa
-- 🔐 **Autenticação Segura**: Criptografia BCrypt
-- 📊 **Painel Administrativo**: Gestão completa de empresas, licenças e usuários
-- 🎨 **Interface Moderna**: Material Design
-- 💾 **Cloud Database**: Supabase (PostgreSQL)
+**[⬇️ Baixar v1.0.1 (91.26 MB)](https://github.com/daniloconsult/NFCeDownloader-Releases/releases/download/v1.0.1/BuscaCupom-v1.0.1.zip)**
 
 ---
 
-## 💻 Requisitos do Sistema
+## Sobre o Sistema
 
-- **Windows**: 10 ou 11 (64-bit)
-- **Espaço em Disco**: ~100 MB
-- **Memória RAM**: Mínimo 2 GB
-- **Internet**: Conexão ativa (para acesso ao banco de dados)
+Sistema profissional para download e gerenciamento de Notas Fiscais Eletronicas (NFCe) com suporte multi-empresa.
 
-> ℹ️ **Não é necessário instalar .NET** - o executável já inclui tudo que precisa!
+### Principais Recursos
+
+- **Multi-Tenant:** Gerenciamento de multiplas empresas
+- **Controle de Usuarios:** Sistema de permissoes por empresa
+- **Autenticacao Segura:** Criptografia BCrypt
+- **Painel Administrativo:** Gestao completa de empresas, licencas e usuarios
+- **Interface Moderna:** Material Design
+- **Cloud Database:** Supabase (PostgreSQL)
+- **Sessoes Controladas:** Limite de usuarios simultaneos por licenca
 
 ---
 
-## 🔧 Como Instalar
+## Requisitos do Sistema
 
-1. Acesse a página de [**Releases**](../../releases)
-2. Baixe o arquivo **ZIP** da última versão
-3. Extraia o arquivo para uma pasta de sua preferência
-4. Execute o arquivo `NFCeDownloader.exe`
+- **Windows:** 10 ou 11 (64-bit)
+- **Espaco em Disco:** ~100 MB
+- **Memoria RAM:** Minimo 2 GB
+- **Internet:** Conexao ativa (para acesso ao banco de dados)
 
-### ⚠️ Primeira Execução
+**Nao e necessario instalar .NET** - o executavel ja inclui tudo que precisa!
+
+---
+
+## Como Instalar
+
+1. Acesse a pagina de [**Releases**](https://github.com/daniloconsult/NFCeDownloader-Releases/releases)
+2. Baixe o arquivo **ZIP** da ultima versao
+3. Extraia o arquivo para uma pasta de sua preferencia
+4. Execute o arquivo `BuscaCupom.exe`
+
+### Primeira Execucao
+
 - Windows pode exibir "Windows protegeu seu PC"
-- Clique em **"Mais informações"** → **"Executar assim mesmo"**
-- Execute como **Administrador** (botão direito → Executar como administrador)
+- Clique em **"Mais informacoes"** → **"Executar assim mesmo"**
+- Execute como **Administrador** (botao direito → Executar como administrador)
 
 ---
 
-## ⚙️ Configuração
+## Configuracao
 
-### 1. Arquivo de Configuração
-Na primeira execução, será criado o arquivo `Config.json` na mesma pasta do executável.
+### 1. Arquivo de Configuracao
+Na primeira execucao, sera criado o arquivo `Config.json` na mesma pasta do executavel.
 
 ### 2. Credenciais Supabase
-Se você é administrador do sistema, configure o `Config.json`:
+Se voce e administrador do sistema, configure o `Config.json`:
 
 ```json
 {
@@ -60,68 +67,95 @@ Se você é administrador do sistema, configure o `Config.json`:
 }
 ```
 
-> ⚠️ **Usuários finais**: Entre em contato com o administrador para obter as credenciais.
+**Usuarios finais:** Entre em contato com o administrador para obter as credenciais.
 
 ---
 
-## 🔑 Login Padrão
+## Login Padrao
 
 ### Conta de Desenvolvedor:
-- **Usuário**: `dev`
-- **Senha**: `dev123`
+- **Usuario:** `dev`
+- **Senha:** `dev123`
 
-> ⚠️ **Importante**: Altere a senha padrão após o primeiro login!
+### Conta Administrativa:
+- **Usuario:** `admin`
+- **Senha:** `admin123`
+
+**Importante:** Altere as senhas padrao apos o primeiro login!
 
 ---
 
-## 🆘 Suporte
+## Novidades v1.0.1
+
+### Melhorias na Interface
+- Corrigido encoding da tela de Administracao
+- Melhorada responsividade dos botoes (efeito hover)
+- Ajustados bindings das grids
+- Corrigido texto de status da licenca
+
+### Correcoes de Bugs
+- Botoes de Usuario agora funcionam corretamente
+- Aba Sessoes Ativas mostra login do usuario
+- Contador de usuarios online atualiza corretamente
+- Desconectar sessao funcionando perfeitamente
+
+---
+
+## Suporte
 
 ### Problemas Comuns
 
-#### ❌ "Erro ao conectar com banco de dados"
-- Verifique sua conexão com a internet
-- Confirme que o arquivo `Config.json` está configurado corretamente
+#### "Erro ao conectar com banco de dados"
+- Verifique sua conexao com a internet
+- Confirme que o arquivo `Config.json` esta configurado corretamente
 - Valide as credenciais do Supabase
 
-#### ❌ "Licença vencida"
+#### "Licenca vencida"
 - Entre em contato com o administrador do sistema
-- Verifique a data de vencimento da licença da sua empresa
+- Verifique a data de vencimento da licenca da sua empresa
 
-#### ❌ "Sessões simultâneas excedidas"
-- Sua empresa atingiu o limite de usuários simultâneos
-- Aguarde outro usuário encerrar a sessão
-- Ou solicite upgrade da licença
-
----
-
-## 📋 Histórico de Versões
-
-Veja todas as versões e mudanças na página de [**Releases**](../../releases).
+#### "Sessoes simultaneas excedidas"
+- Sua empresa atingiu o limite de usuarios simultaneos
+- Aguarde outro usuario encerrar a sessao
+- Ou solicite upgrade da licenca
 
 ---
 
-## 🔒 Privacidade e Segurança
+## Historico de Versoes
 
-- ✅ Senhas criptografadas com BCrypt
-- ✅ Comunicação segura via HTTPS
-- ✅ Banco de dados em nuvem confiável (Supabase)
-- ✅ Logs de acesso para auditoria
-- ✅ Controle de sessões simultâneas
+### v1.0.1 (Atual)
+- Correcoes de interface e bugs
+- Melhorias de responsividade
+
+### v1.0.0
+- Lancamento inicial
+- Sistema multi-tenant completo
+
+Veja todas as versoes na pagina de [**Releases**](https://github.com/daniloconsult/NFCeDownloader-Releases/releases).
 
 ---
 
-## 📞 Contato
+## Privacidade e Seguranca
 
-Para dúvidas, sugestões ou reportar problemas:
-- 📧 Email: [seu-email@exemplo.com]
-- 🐛 Issues: [Abrir ticket](../../issues)
+- Senhas criptografadas com BCrypt
+- Comunicacao segura via HTTPS
+- Banco de dados em nuvem confiavel (Supabase)
+- Logs de acesso para auditoria
+- Controle de sessoes simultaneas
+
+---
+
+## Contato
+
+Para duvidas, sugestoes ou reportar problemas:
+- **Issues:** [Abrir ticket](https://github.com/daniloconsult/NFCeDownloader-Releases/issues)
 
 ---
 
 <div align="center">
 
-**Desenvolvido com ❤️ usando .NET 8 + WPF + Supabase**
+**Desenvolvido com .NET 8 + WPF + Supabase**
 
-[⬇️ Baixar Agora](../../releases/latest) | [📖 Documentação](../../wiki) | [🐛 Reportar Bug](../../issues)
+[⬇️ Baixar Agora](https://github.com/daniloconsult/NFCeDownloader-Releases/releases/latest) | [📋 Todas as Versoes](https://github.com/daniloconsult/NFCeDownloader-Releases/releases) | [🐛 Reportar Bug](https://github.com/daniloconsult/NFCeDownloader-Releases/issues)
 
 </div>
